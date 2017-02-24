@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CarProject.CarParts;
+using CarProject.CarParts.TuningParts;
+using CarProject.CarParts.TuningParts.ForEngine;
 
 namespace CarProject.CarParts.CarEngine
 {
@@ -12,13 +14,16 @@ namespace CarProject.CarParts.CarEngine
         private string name = "engine";
         private string type = "";
         private int volume = 0; // в технической документации объем двигателя указывается в кубических см, поэтому int
+        private List<Tuning> possibletuning = null;
 
-        public Engine() { }
+        public override List<Tuning> PossibleTuning { get { return this.possibletuning; } }
 
         public Engine(string t, int v)
         {
             this.type = t;
             this.volume = Vol_Valid(v);
+            this.possibletuning = new List<Tuning>();
+            possibletuning.Add(new Turbo());
         }
 
         public override float Price

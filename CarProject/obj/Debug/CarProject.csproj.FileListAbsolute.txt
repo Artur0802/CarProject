@@ -3,3 +3,8 @@ E:\#STUDY\Recurtion\CarProject\CarProject\bin\Debug\CarProject.exe
 E:\#STUDY\Recurtion\CarProject\CarProject\bin\Debug\CarProject.pdb
 E:\#STUDY\Recurtion\CarProject\CarProject\obj\Debug\CarProject.exe
 E:\#STUDY\Recurtion\CarProject\CarProject\obj\Debug\CarProject.pdb
+E:\#STUDY\CarProject\CarProject\CarProject\bin\Debug\CarProject.exe.config
+E:\#STUDY\CarProject\CarProject\CarProject\obj\Debug\CarProject.exe
+E:\#STUDY\CarProject\CarProject\CarProject\obj\Debug\CarProject.pdb
+E:\#STUDY\CarProject\CarProject\CarProject\bin\Debug\CarProject.exe
+E:\#STUDY\CarProject\CarProject\CarProject\bin\Debug\CarProject.pdb

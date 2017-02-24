@@ -16,16 +16,29 @@ namespace CarProject.CarParts
         public CarPartWithTuning(CarPart carpart)
         {
             base.PartName = carpart.PartName;
+            base.PossibleTuning = carpart.PossibleTuning;
         }
 
         public CarPartWithTuning(CarPart carpart, Tuning tuningpart)
         {
-            base.PartName = carpart.PartName + " was tuned by " + tuningpart.Assembled_Item_Name;
-            base.Price = carpart.Price + tuningpart.Price;
-            this.carpart = carpart;
-            this.tuningpart = tuningpart;
-            tuningpart.Tuned += EventHandler;
-            tuningpart.SendTuningEvent();
+            if (carpart.PossibleTuning.Contains(tuningpart))
+            {
+                base.PartName = carpart.PartName + " was tuned by " + tuningpart.Assembled_Item_Name;
+                base.Price = carpart.Price + tuningpart.Price;
+                this.carpart = carpart;
+                this.tuningpart = tuningpart;
+                tuningpart.Tuned += EventHandler;
+                tuningpart.SendTuningEvent();
+            }
+            else
+            {
+                base.PartName = "Can't tuning" + carpart.PartName + " by " + tuningpart.Assembled_Item_Name;
+                base.Price = 0;
+                this.carpart = carpart;
+                this.tuningpart = tuningpart;
+                tuningpart.Tuned += EventHandler;
+                tuningpart.SendTuningEvent();
+            }
         }
 
         public void EventHandler()

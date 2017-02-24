@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CarProject.CarParts;
+using CarProject.CarParts.TuningParts;
 
 namespace CarProject.CarParts.CarWheel
 {
@@ -12,7 +13,7 @@ namespace CarProject.CarParts.CarWheel
         private string name = "Wheels";
         private int diameter = 0;
         private string gum_type = "";
-
+        
         public Wheel(int d, string gt)
         {
             this.diameter = Diam_Valid(d);
