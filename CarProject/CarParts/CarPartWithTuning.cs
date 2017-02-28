@@ -25,6 +25,7 @@ namespace CarProject.CarParts
             {
                 base.PartName = carpart.PartName + " was tuned by " + tuningpart.Assembled_Item_Name;
                 base.Price = carpart.Price + tuningpart.Price;
+                base.PossibleTuning = carpart.PossibleTuning;
                 this.carpart = carpart;
                 this.tuningpart = tuningpart;
                 tuningpart.Tuned += EventHandler;
@@ -32,7 +33,7 @@ namespace CarProject.CarParts
             }
             else
             {
-                base.PartName = "Can't tuning" + carpart.PartName + " by " + tuningpart.Assembled_Item_Name;
+                base.PartName = carpart.PartName + " and cannot be tuned by " + tuningpart.Assembled_Item_Name;
                 base.Price = 0;
                 this.carpart = carpart;
                 this.tuningpart = tuningpart;
@@ -43,7 +44,7 @@ namespace CarProject.CarParts
 
         public void EventHandler()
         {
-            Console.WriteLine(this.tuningpart.Assembled_Item_Name + " added");
+            Console.WriteLine("Try to add " + this.tuningpart.Assembled_Item_Name);
         }
     }
 }
