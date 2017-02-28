@@ -18,17 +18,5 @@ namespace CarProject.CarParts.TuningParts.ForBody
         {
             Tuned();
         }
-
-        public override bool Equals(Tuning other)
-        {
-            if (this.Assembled_Item_Name == other.Assembled_Item_Name && this.Price == other.Price)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }

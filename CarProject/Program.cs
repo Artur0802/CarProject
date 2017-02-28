@@ -7,6 +7,7 @@ using CarProject.Cars;
 using CarProject.CarParts;
 using CarProject.CarParts.CarBody;
 using CarProject.CarParts.TuningParts.ForBody;
+using CarProject.CarParts.TuningParts.ForEngine;
 
 namespace CarProject
 {
@@ -18,7 +19,7 @@ namespace CarProject
             car.Give_Info_For_Buing();
             Console.WriteLine();
 
-            car.TuningCar(new CarPartWithTuning(new CarPartWithTuning(new CarPartWithTuning(car.CarBody), new Spoiler()), new AudioSystem()));
+            car.TuningCar(new CarPartWithTuning(new CarPartWithTuning(new CarPartWithTuning(car.CarBody), new Spoiler()), new Turbo()));
             car.Give_Info_For_Buing();
 
             Console.ReadKey();

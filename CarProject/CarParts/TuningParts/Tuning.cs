@@ -9,7 +9,7 @@ namespace CarProject.CarParts.TuningParts
 {
     delegate void TunningAdd();
 
-    abstract class Tuning:IAssemblyItem
+    abstract class Tuning:IAssemblyItem, IEquatable<Tuning>
     {
         public virtual event TunningAdd Tuned;
 
@@ -22,7 +22,16 @@ namespace CarProject.CarParts.TuningParts
             Tuned();
         }
 
-        public virtual bool Equals(Tuning other)
-        { return true; }
+        public bool Equals(Tuning other)
+        {
+            if (this.Assembled_Item_Name == other.Assembled_Item_Name && this.Price == other.Price)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
