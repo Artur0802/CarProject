@@ -21,5 +21,8 @@ namespace CarProject.CarParts.TuningParts
         {
             Tuned();
         }
+
+        public virtual bool Equals(Tuning other)
+        { return true; }
     }
 }
